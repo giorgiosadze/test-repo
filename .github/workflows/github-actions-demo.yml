@@ -1,15 +1,10 @@
-name: GitHub Actions Demo
+name: Create and compile a hello world C++ program
 on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
+      - name: Do the stuff
       - run: printf "#include <iostream> \n int main() { std::cout << \"test\" << std::endl } " > test.cpp
       - run: g++ test.cpp
       - run: ./a.out
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
