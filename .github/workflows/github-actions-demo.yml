@@ -2,10 +2,10 @@ name: Build
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Check out
         uses: actions/checkout@master
       - name: Compile source
-        run: g++ -std=c++2a main.cpp
+        run: g++ -std=c++20 main.cpp
       - run: ./a.out
