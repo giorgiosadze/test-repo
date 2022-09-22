@@ -1,14 +1,14 @@
 #include <iostream>
-#include <ranges>
+#include <algorithm>
 #include <random>
 int main()
 {
   
   std::random_device r;
   std::vector<int> v {5,7,334,37};
-  std::ranges::sort(v,r);
+  std::sort(v.begin(), v.end(),r);
   
-  std::ranges::for_each(v, [](auto e) { 
+  std::for_each(v.begin(), v.end(), [](auto e) { 
     std::cout << e << std::endl; 
   });
   
