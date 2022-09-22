@@ -7,5 +7,5 @@ jobs:
       - name: Check out
         uses: actions/checkout@master
       - name: Compile source
-        run: g++ main.cpp
+        run: g++ -std=c++20 main.cpp
       - run: ./a.out
