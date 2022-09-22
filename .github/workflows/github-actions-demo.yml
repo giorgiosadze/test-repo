@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create source
-      - run: printf "#include <iostream> \n int main() { std::cout << \"test\" << std::endl } " > test.cpp
+        run: printf "#include <iostream> \n int main() { std::cout << \"test\" << std::endl } " > test.cpp
       - name: Compile source
-      - run: g++ test.cpp
+        run: g++ test.cpp
       - run: ./a.out
