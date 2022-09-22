@@ -7,5 +7,5 @@ jobs:
       - name: Create source
         run: ls
       - name: Compile source
-        run: g++ main.cpp
+        run: g++ ./main.cpp
       - run: ./a.out
