@@ -4,8 +4,8 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Create source
-        run: ls
+      - name: Check out
+        uses: actions/checkout@master
       - name: Compile source
-        run: g++ ./main.cpp
+        run: g++ main.cpp
       - run: ./a.out
