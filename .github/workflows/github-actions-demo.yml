@@ -4,10 +4,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-22.04
     steps:
-      - name: C/C++ Linter
-        uses: cpp-linter/cpp-linter-action@v2.1.1
       - name: Check out
         uses: actions/checkout@master
+      - name: C/C++ Linter
+        uses: cpp-linter/cpp-linter-action@v2.1.1
       - name: Compile source
         run: g++ -std=c++2a main.cpp
       - run: ./a.out
