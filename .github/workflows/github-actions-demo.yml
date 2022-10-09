@@ -8,7 +8,5 @@ jobs:
         uses: actions/checkout@master
       - name: C/C++ Linter
         uses: cpp-linter/cpp-linter-action@v2.1.1
-      - name: Compile source
-        run: g++ -std=c++2a main.cpp
-      - run: ./a.out
+
 
